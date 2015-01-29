@@ -17,9 +17,12 @@ import java.util.List;
 //Requires a ViewHolder for caching views
 public class CustomRecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
-    public List<Data> mData = Collections.emptyList();
+    private List<Data> mData = Collections.emptyList();
+    private int itemLayout;
 
-    public CustomRecyclerAdapter() {
+    public CustomRecyclerAdapter(List<Data> mData, int itemLayout) {
+        this.mData = mData;
+        this.itemLayout = itemLayout;
         // Pass context or other static stuff that will be needed.
     }
 
